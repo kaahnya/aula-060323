@@ -9,8 +9,9 @@
     <script src='main.js'></script>
 </head>
 <body>
-    <% usuarios.forEach((usuario) => { %>
-        <%= usuario.nome %>
+    <% pessoas.forEach((pessoa) => { %>
+      <p> <%= pessoas.nome %></p> <p> <%= pessoas.sobrenome %> </p>
     <% }) %>
+    <a href="/pessoas">DELETAR</a>
 </body>
 </html>
