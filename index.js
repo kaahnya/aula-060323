@@ -33,14 +33,13 @@ app.post('/pessoas/criar', async function(req, res){
 
 app.get('/pessoas/deletar', async function(req, res){
   try {
-      const pessoa = await pessoa.findByPk(req.query.id);
-      res.render('pessoas/deletar', { pessoa });
+      await pessoa.destroy({ where: { id: req.query.id } });
+      res.redirect('/pessoas')
   } catch (err) {
       console.error(err);
-      res.status(500).json({ message: 'Ocorreu um erro ao buscar o usuário.' });
+      res.status(500).json({ message: 'Ocorreu um erro ao criar o usuário.' });
   }
 })
-
 
 app.listen(3000, function() {
   console.log('App de Exemplo escutando na porta 3000!')

@@ -9,9 +9,13 @@
     <script src='main.js'></script>
 </head>
 <body>
-    <% pessoas.forEach((pessoa) => { %>
-      <p> <%= pessoas.nome %></p> <p> <%= pessoas.sobrenome %> </p>
+  <p>
+    <% pessoas.forEach((pessoas) => { %>
+     <%= pessoas.nome %> <%= pessoas.sobrenome %> <%= pessoas.id %>
+     <a href="/pessoas/deletar?id=<%= pessoas.id %>">DELETAR</a>
+     <br />
     <% }) %>
-    <a href="/pessoas">DELETAR</a>
+    
+  </p>
 </body>
 </html>
