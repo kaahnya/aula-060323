@@ -7,15 +7,37 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
+
+<style>
+body{
+  background-color: aquamarine;
+}
+
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+
+</style>
+
 </head>
 <body>
-  <p>
+  <section class="articles">
+      <div class="card">
     <% pessoas.forEach((pessoas) => { %>
-     <%= pessoas.nome %> <%= pessoas.sobrenome %> <%= pessoas.id %>
+     <%= pessoas.id %> <%= pessoas.nome %> <%= pessoas.sobrenome %>
      <a href="/pessoas/deletar?id=<%= pessoas.id %>">DELETAR</a>
      <br />
     <% }) %>
-    
-  </p>
+      </div>
+    </section>
 </body>
 </html>

@@ -23,7 +23,7 @@ app.get('/pessoas/criar', async function(req, res){
 
 app.post('/pessoas/criar', async function(req, res){
   try {
-      await pessoa.create(req.body);
+      await pessoas.create(req.body);
       res.redirect('/pessoas')
   } catch (err) {
       console.error(err);

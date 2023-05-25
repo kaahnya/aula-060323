@@ -7,19 +7,58 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
+
+<style>
+
+label{
+    font-size: 25px;
+}
+
+h1{
+    text-align: center;
+}
+
+.f{
+    margin-left: 620px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+</style>
+
 </head>
-<body>
     <form method="post" action="/pessoas/criar">
         <h1>Dados</h1>
-        <label id="nome" for="text">Nome:</label>
+        <div class="a">
+        <label id="nome" for="nome">Nome:</label>
         <input type="text" class="texto"/>
-        <label id="sobrenome" for="text">Sobrenome:</label>
+        </div>
+        <div class="a2">
+        <label id="sobrenome" for="sobrenome">Sobrenome:</label>
         <input type="text" class="texto"/>
-        <label id="idade" for="text">Idade:</label>
+        </div>
+        <div class="a3">
+        <label id="idade" for="idade">Idade:</label>
         <input type="text" class="texto"/>
-        <label id="altura" for="text">Altura:</label>
+        </div>
+        <div class="a4">
+        <label id="altura" for="altura">Altura:</label>
         <input type="text" class="texto"/>
-        <input type="submit" value="Enviar">
+        </div>
+        <input class="f" type="submit" value="Enviar">
     </form>
 </body>
 </html>
